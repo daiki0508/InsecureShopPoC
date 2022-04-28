@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">InsecureShopPoC</string>
+    <string name="mstg">MSTG-STORAGE</string>
 </resources>
