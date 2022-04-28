@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.websarva.wings.android.insecureshoppoc.R
-import com.websarva.wings.android.insecureshoppoc.databinding.FragmentTopBinding
+import com.websarva.wings.android.insecureshoppoc.databinding.FragmentStorageBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class TopFragment: Fragment() {
-    private var _binding: FragmentTopBinding? = null
-    private val binding
+class StorageFragment: Fragment() {
+    private var _binding: FragmentStorageBinding? = null
+    private val binding: FragmentStorageBinding
     get() = _binding!!
 
     override fun onCreateView(
@@ -21,7 +21,7 @@ class TopFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentTopBinding.inflate(inflater, container, false)
+        _binding = FragmentStorageBinding.inflate(inflater, container, false)
 
         return binding.root
     }
@@ -31,17 +31,11 @@ class TopFragment: Fragment() {
 
         // recyclerViewの第１引数に渡す値の作成
         val items = mapOf(
-            "position" to "top",
-            "items" to listOf(getString(R.string.mstg_storage))
+            "position" to "storage",
+            "items" to listOf(getString(R.string.storage_1))
         )
         // recyclerViewの作成
-        binding.rvTop.adapter = RecyclerViewAdapter(requireActivity(), items)
-        binding.rvTop.layoutManager = LinearLayoutManager(activity)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-
-        _binding = null
+        binding.rvStorage.adapter = RecyclerViewAdapter(requireActivity(), items)
+        binding.rvStorage.layoutManager = LinearLayoutManager(activity)
     }
 }
