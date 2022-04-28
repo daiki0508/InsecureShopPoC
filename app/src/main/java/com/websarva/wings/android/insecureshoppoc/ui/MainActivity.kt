@@ -1,7 +1,8 @@
-package com.websarva.wings.android.insecureshoppoc
+package com.websarva.wings.android.insecureshoppoc.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.websarva.wings.android.insecureshoppoc.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
