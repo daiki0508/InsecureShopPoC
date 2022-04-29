@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.websarva.wings.android.insecureshoppoc">
 
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
     <application
         android:name=".di.Application"
         android:allowBackup="false"

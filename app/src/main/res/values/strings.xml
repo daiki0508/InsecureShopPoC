@@ -8,4 +8,10 @@
     <string name="storage_2">MSTG-STORAGE-2</string>
     <string name="storage_2_title">Info</string>
     <string name="storage_2_message">MSTG-PLATFORM-1に該当する脆弱性の「任意ファイルの盗難」を参照</string>
+    <string name="storage_3">MSTG-STORAGE-3</string>
+    <string name="storage_3_description">Start Recordボタンをタップすると端末内のログを収集してlog.txtとしてアプリ内の内部ストレージ内に保存します\nアプリを終了するか、Finish Recordボタンをタップするとログの収集を停止します</string>
+    <string name="storage_3_bt_start">Start Record</string>
+    <string name="storage_3_bt_finish">Finish Record</string>
+    <string name="storage_3_toast_start">Recording…</string>
+    <string name="storage_3_toast_finish">Stop!!</string>
 </resources>

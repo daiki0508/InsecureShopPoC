@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.websarva.wings.android.insecureshoppoc.R
+import com.websarva.wings.android.insecureshoppoc.ui.fragment.storage.Storage3Fragment
 
 @Suppress("UNCHECKED_CAST")
 class RecyclerViewAdapter(
@@ -54,6 +55,10 @@ class RecyclerViewAdapter(
                                     }
                                 )).show(it.supportFragmentManager, "InfoDialog")
                             }
+                        }
+                        2 -> {
+                            // Storage3Fragmentの起動
+                            transaction(activity).replace(R.id.fragment_container, Storage3Fragment()).commit()
                         }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")

@@ -32,7 +32,7 @@ class StorageFragment: Fragment() {
         // recyclerViewの第１引数に渡す値の作成
         val items = mapOf(
             "position" to "storage",
-            "items" to listOf(getString(R.string.storage_1), getString(R.string.storage_2))
+            "items" to listOf(getString(R.string.storage_1), getString(R.string.storage_2), getString(R.string.storage_3))
         )
         // recyclerViewの作成
         binding.rvStorage.adapter = RecyclerViewAdapter(requireActivity(), items)
