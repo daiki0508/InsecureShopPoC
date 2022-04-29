@@ -38,9 +38,21 @@ class RecyclerViewAdapter(
                 }
                 "storage" -> {
                     when(position){
-                        0 -> {
+                        0, 1 -> {
                             activity.let {
-                                InfoDialogFragment(it.getString(R.string.storage_1_title), it.getString(R.string.storage_1_message)).show(it.supportFragmentManager, "InfoDialog")
+                                InfoDialogFragment(it.getString(
+                                    if (position == 0){
+                                        R.string.storage_1_title
+                                    }else{
+                                        R.string.storage_2_title
+                                    }
+                                ), it.getString(
+                                    if (position == 0){
+                                        R.string.storage_1_message
+                                    }else{
+                                        R.string.storage_2_message
+                                    }
+                                )).show(it.supportFragmentManager, "InfoDialog")
                             }
                         }
                         else -> {
