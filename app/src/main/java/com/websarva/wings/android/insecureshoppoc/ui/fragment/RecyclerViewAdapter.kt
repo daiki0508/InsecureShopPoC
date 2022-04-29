@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.websarva.wings.android.insecureshoppoc.R
 
+@Suppress("UNCHECKED_CAST")
 class RecyclerViewAdapter(
     private val activity: FragmentActivity,
     private val items: Map<String, Any>
@@ -27,6 +28,7 @@ class RecyclerViewAdapter(
                 "top" ->{
                     when(position){
                         0 -> {
+                            // StorageFragmentの起動
                             transaction(activity).replace(R.id.fragment_container, StorageFragment()).commit()
                         }
                         else -> {
@@ -35,7 +37,16 @@ class RecyclerViewAdapter(
                     }
                 }
                 "storage" -> {
-                    TODO("未実装")
+                    when(position){
+                        0 -> {
+                            activity.let {
+                                InfoDialogFragment(it.getString(R.string.storage_1_title), it.getString(R.string.storage_1_message)).show(it.supportFragmentManager, "InfoDialog")
+                            }
+                        }
+                        else -> {
+                            throw IllegalArgumentException("Out of range of the array.")
+                        }
+                    }
                 }
                 else ->{
                     throw IllegalArgumentException("Out of range of the array.")
@@ -45,7 +56,7 @@ class RecyclerViewAdapter(
     }
 
     private fun transaction(activity: FragmentActivity): FragmentTransaction = activity.supportFragmentManager.beginTransaction()
-        .setCustomAnimations(R.anim.fragment_up_enter, R.anim.fragment_up_exit)
+        .setCustomAnimations(R.anim.fragment_up_enter, R.anim.fragment_up_exit, android.R.anim.fade_in, android.R.anim.fade_out).addToBackStack(null)
 
     override fun getItemCount(): Int {
         return (items["items"] as List<String>).size

@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">InsecureShopPoC</string>
     <string name="mstg_storage">MSTG-STORAGE</string>
+
     <string name="storage_1">MSTG-STORAGE-1</string>
+    <string name="storage_1_title">Info</string>
+    <string name="storage_1_message">com.insecureshop.utilのgetUserCreds()に機密情報がハードコードされている\nuserCreds.put("shopuser", "!ns3csh0p");</string>
 </resources>
