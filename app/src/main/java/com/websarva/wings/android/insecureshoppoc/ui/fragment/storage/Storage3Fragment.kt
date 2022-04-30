@@ -45,4 +45,10 @@ class Storage3Fragment: Fragment() {
             viewModel.finishLog()
         }
     }
+
+    override fun onDestroyView() {
+        _binding = null
+
+        super.onDestroyView()
+    }
 }

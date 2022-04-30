@@ -14,4 +14,8 @@
     <string name="storage_3_bt_finish">Finish Record</string>
     <string name="storage_3_toast_start">Recording…</string>
     <string name="storage_3_toast_finish">Stop!!</string>
+    <string name="storage_5">MSTG-STORAGE-5</string>
+    <string name="storage_5_bt_display">Display Clipboard</string>
+    <string name="storage_5_toast_error">クリップボードが空です</string>
+    <string name="storage_5_title">Info</string>
 </resources>
