@@ -4,6 +4,7 @@
     package="com.websarva.wings.android.insecureshoppoc">
 
     <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="com.insecureshop.permission.READ" />
 
     <application
         android:name=".di.Application"

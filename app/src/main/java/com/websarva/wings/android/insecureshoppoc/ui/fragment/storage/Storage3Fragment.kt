@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.websarva.wings.android.insecureshoppoc.R
 import com.websarva.wings.android.insecureshoppoc.databinding.FragmentStorage3Binding
-import com.websarva.wings.android.insecureshoppoc.viewmodel.fragment.storage.Storage3ViewModel
+import com.websarva.wings.android.insecureshoppoc.viewmodel.fragment.storage.StorageViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -18,7 +18,7 @@ class Storage3Fragment: Fragment() {
     private val binding
     get() = _binding!!
 
-    private val viewModel: Storage3ViewModel by viewModels()
+    private val viewModel: StorageViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

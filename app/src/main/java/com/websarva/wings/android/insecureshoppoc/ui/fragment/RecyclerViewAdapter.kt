@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.websarva.wings.android.insecureshoppoc.R
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.storage.Storage3Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.storage.Storage5Fragment
+import com.websarva.wings.android.insecureshoppoc.ui.fragment.storage.Storage6Fragment
 
 @Suppress("UNCHECKED_CAST")
 class RecyclerViewAdapter(
@@ -63,6 +64,9 @@ class RecyclerViewAdapter(
                         }
                         3 -> {
                             transaction(activity).replace(R.id.fragment_container, Storage5Fragment()).commit()
+                        }
+                        4 -> {
+                            transaction(activity).replace(R.id.fragment_container, Storage6Fragment()).commit()
                         }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")

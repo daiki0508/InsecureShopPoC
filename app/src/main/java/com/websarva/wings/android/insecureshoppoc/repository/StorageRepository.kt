@@ -1,14 +1,17 @@
 package com.websarva.wings.android.insecureshoppoc.repository
 
 import android.content.Context
+import android.net.Uri
 import android.util.Log
 import java.io.*
 import java.lang.Exception
+import java.lang.StringBuilder
 import javax.inject.Inject
 
 interface StorageRepository {
     fun startLog(context: Context)
     fun finishLog()
+    fun dump(context: Context, uri: Uri, listener: (result: String) -> Unit)
 }
 
 class StorageRepositoryClient @Inject constructor(): StorageRepository {
@@ -25,6 +28,23 @@ class StorageRepositoryClient @Inject constructor(): StorageRepository {
     override fun finishLog() {
         if (logThread != null){
             logThread!!.interrupt()
+        }
+    }
+
+    override fun dump(context: Context, uri: Uri, listener: (result: String)->Unit){
+        context.contentResolver.query(uri, null, null, null, null).use {
+            if (it!!.moveToFirst()){
+                do {
+                    val sb = StringBuilder()
+                    for (i in 0 until it.columnCount){
+                        if (sb.isNotEmpty()){
+                            sb.append(", ")
+                        }
+                        sb.append(it.getColumnName(i).toString() + " = " + it.getString(i))
+                    }
+                    listener(sb.toString())
+                }while (it.moveToNext())
+            }
         }
     }
 }
