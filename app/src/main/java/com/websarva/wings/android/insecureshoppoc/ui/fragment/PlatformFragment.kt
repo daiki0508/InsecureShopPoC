@@ -33,7 +33,8 @@ class PlatformFragment: Fragment() {
         val items = mapOf(
             "position" to "platform",
             "items" to listOf(
-                getString(R.string.mstg_platform_1)
+                getString(R.string.mstg_platform_1),
+                getString(R.string.mstg_platform_2)
             )
         )
         // recyclerViewの作成
