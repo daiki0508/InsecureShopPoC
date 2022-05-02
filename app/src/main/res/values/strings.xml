@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">InsecureShopPoC</string>
+    <string name="mstg_storage">MSTG-STORAGE</string>
+
+    <string name="storage_1">MSTG-STORAGE-1</string>
+    <string name="storage_1_title">Info</string>
+    <string name="storage_1_message">com.insecureshop.utilのgetUserCreds()に機密情報がハードコードされている\nuserCreds.put("shopuser", "!ns3csh0p");</string>
+    <string name="storage_2">MSTG-STORAGE-2</string>
+    <string name="storage_2_title">Info</string>
+    <string name="storage_2_message">MSTG-PLATFORM-1に該当する脆弱性の「任意ファイルの盗難」を参照</string>
+    <string name="storage_3">MSTG-STORAGE-3</string>
+    <string name="storage_3_description">Start Recordボタンをタップすると端末内のログを収集してlog.txtとしてアプリ内の内部ストレージ内に保存します\nアプリを終了するか、Finish Recordボタンをタップするとログの収集を停止します</string>
+    <string name="storage_3_bt_start">Start Record</string>
+    <string name="storage_3_bt_finish">Finish Record</string>
+    <string name="storage_3_toast_start">Recording…</string>
+    <string name="storage_3_toast_finish">Stop!!</string>
+    <string name="storage_5">MSTG-STORAGE-5</string>
+    <string name="storage_5_bt_display">Display Clipboard</string>
+    <string name="storage_5_toast_error">クリップボードが空です</string>
+    <string name="storage_5_title">Info</string>
+    <string name="storage_6">MSTG-STORAGE-6</string>
+    <string name="storage_6_description">InsecureShopProviderに対して攻撃します\n結果としてDBの中身が返されます</string>
+    <string name="storage_6_bt_attack">Attack</string>
+    <string name="storage_6_toast_error">エラーが発生しました</string>
+    <string name="storage_6_title">Info</string>
 </resources>
