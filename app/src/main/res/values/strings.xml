@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">InsecureShopPoC</string>
     <string name="mstg_storage">MSTG-STORAGE</string>
+    <string name="mstg_network">MSTG-NETWORK</string>
 
     <string name="storage_1">MSTG-STORAGE-1</string>
     <string name="storage_1_title">Info</string>
@@ -23,4 +24,11 @@
     <string name="storage_6_bt_attack">Attack</string>
     <string name="storage_6_toast_error">エラーが発生しました</string>
     <string name="storage_6_title">Info</string>
+
+    <string name="network_1">MSTG-NETWORK-1</string>
+    <string name="network_1_title">Info</string>
+    <string name="network_1_message">Androidmanifest.xmlでusesCleartextTrafficがtrueなため、MITMに対して脆弱です\n機密情報をhttpでやり取りしないようにしてください</string>
+    <string name="network_3">MSTG-NETWORK-3</string>
+    <string name="network_3_title">Info</string>
+    <string name="network_3_message">WebViewActivityとWebView2Activityで使用しているCustomWebViewClientは証明書検証のエラーを無視しています\nこれはMITMに対して脆弱です</string>
 </resources>
