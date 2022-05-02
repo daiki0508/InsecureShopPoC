@@ -34,6 +34,10 @@ class RecyclerViewAdapter(
                             // StorageFragmentの起動
                             transaction(activity).replace(R.id.fragment_container, StorageFragment()).commit()
                         }
+                        1 -> {
+                            // NetworkFragmentの起動
+                            transaction(activity).replace(R.id.fragment_container, NetworkFragment()).commit()
+                        }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")
                         }
@@ -67,6 +71,30 @@ class RecyclerViewAdapter(
                         }
                         4 -> {
                             transaction(activity).replace(R.id.fragment_container, Storage6Fragment()).commit()
+                        }
+                        else -> {
+                            throw IllegalArgumentException("Out of range of the array.")
+                        }
+                    }
+                }
+                "network" -> {
+                    when(position){
+                        0, 1 -> {
+                            activity.let {
+                                InfoDialogFragment(it.getString(
+                                    if (position == 0){
+                                        R.string.network_1_title
+                                    }else{
+                                        R.string.network_3_title
+                                    }
+                                ), it.getString(
+                                    if (position == 0){
+                                        R.string.network_1_message
+                                    }else{
+                                        R.string.network_3_message
+                                    }
+                                )).show(it.supportFragmentManager, "InfoDialog")
+                            }
                         }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")
