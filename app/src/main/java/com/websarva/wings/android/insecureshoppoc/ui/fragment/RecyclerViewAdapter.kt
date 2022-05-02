@@ -38,6 +38,10 @@ class RecyclerViewAdapter(
                             // NetworkFragmentの起動
                             transaction(activity).replace(R.id.fragment_container, NetworkFragment()).commit()
                         }
+                        2 -> {
+                            // PlatformFragmentの起動
+                            transaction(activity).replace(R.id.fragment_container, PlatformFragment()).commit()
+                        }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")
                         }
@@ -94,6 +98,18 @@ class RecyclerViewAdapter(
                                         R.string.network_3_message
                                     }
                                 )).show(it.supportFragmentManager, "InfoDialog")
+                            }
+                        }
+                        else -> {
+                            throw IllegalArgumentException("Out of range of the array.")
+                        }
+                    }
+                }
+                "platform" -> {
+                    when(position){
+                        0 -> {
+                            activity.let {
+                                InfoDialogFragment(it.getString(R.string.mstg_platform_1_title), it.getString(R.string.mstg_platform_1_message)).show(it.supportFragmentManager, "InfoDialog")
                             }
                         }
                         else -> {

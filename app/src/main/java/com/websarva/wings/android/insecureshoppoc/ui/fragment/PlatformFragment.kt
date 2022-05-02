@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.websarva.wings.android.insecureshoppoc.R
-import com.websarva.wings.android.insecureshoppoc.databinding.FragmentTopBinding
+import com.websarva.wings.android.insecureshoppoc.databinding.FragmentPlatformBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class TopFragment: Fragment() {
-    private var _binding: FragmentTopBinding? = null
+class PlatformFragment: Fragment() {
+    private var _binding: FragmentPlatformBinding? = null
     private val binding
     get() = _binding!!
 
@@ -21,7 +21,7 @@ class TopFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentTopBinding.inflate(inflater, container, false)
+        _binding = FragmentPlatformBinding.inflate(inflater, container, false)
 
         return binding.root
     }
@@ -31,16 +31,14 @@ class TopFragment: Fragment() {
 
         // recyclerViewの第１引数に渡す値の作成
         val items = mapOf(
-            "position" to "top",
+            "position" to "platform",
             "items" to listOf(
-                getString(R.string.mstg_storage),
-                getString(R.string.mstg_network),
-                getString(R.string.mstg_platform)
+                getString(R.string.mstg_platform_1)
             )
         )
         // recyclerViewの作成
-        binding.rvTop.adapter = RecyclerViewAdapter(requireActivity(), items)
-        binding.rvTop.layoutManager = LinearLayoutManager(activity)
+        binding.rvPlatform.adapter = RecyclerViewAdapter(requireActivity(), items)
+        binding.rvPlatform.layoutManager = LinearLayoutManager(activity)
     }
 
     override fun onDestroyView() {

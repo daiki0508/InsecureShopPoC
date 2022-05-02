@@ -2,6 +2,7 @@
     <string name="app_name">InsecureShopPoC</string>
     <string name="mstg_storage">MSTG-STORAGE</string>
     <string name="mstg_network">MSTG-NETWORK</string>
+    <string name="mstg_platform">MSTG-PLATFORM</string>
 
     <string name="storage_1">MSTG-STORAGE-1</string>
     <string name="storage_1_title">Info</string>
@@ -31,4 +32,8 @@
     <string name="network_3">MSTG-NETWORK-3</string>
     <string name="network_3_title">Info</string>
     <string name="network_3_message">WebViewActivityとWebView2Activityで使用しているCustomWebViewClientは証明書検証のエラーを無視しています\nこれはMITMに対して脆弱です</string>
+
+    <string name="mstg_platform_1">MSTG-PLATFORM-1</string>
+    <string name="mstg_platform_1_title">Info</string>
+    <string name="mstg_platform_1_message">外部ストレージへの読み書きとアドレス帳へのREAD権限が有効になっています\nこの権限が本当に必要かどうかを確認してください\n思わぬ脆弱性に繋がる可能性があります</string>
 </resources>
