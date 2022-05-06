@@ -6,6 +6,10 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.websarva.wings.android.insecureshoppoc.R
+import com.websarva.wings.android.insecureshoppoc.ui.fragment.code.Code1Fragment
+import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform2Fragment
+import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform3Fragment
+import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform4Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.storage.Storage3Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.storage.Storage5Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.storage.Storage6Fragment
@@ -37,6 +41,14 @@ class RecyclerViewAdapter(
                         1 -> {
                             // NetworkFragmentの起動
                             transaction(activity).replace(R.id.fragment_container, NetworkFragment()).commit()
+                        }
+                        2 -> {
+                            // PlatformFragmentの起動
+                            transaction(activity).replace(R.id.fragment_container, PlatformFragment()).commit()
+                        }
+                        3 -> {
+                            // CodeFragmentの起動
+                            transaction(activity).replace(R.id.fragment_container, CodeFragment()).commit()
                         }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")
@@ -95,6 +107,49 @@ class RecyclerViewAdapter(
                                     }
                                 )).show(it.supportFragmentManager, "InfoDialog")
                             }
+                        }
+                        else -> {
+                            throw IllegalArgumentException("Out of range of the array.")
+                        }
+                    }
+                }
+                "platform" -> {
+                    when(position){
+                        0,4 -> {
+                            activity.let {
+                                InfoDialogFragment(it.getString(
+                                    if (position == 0){
+                                        R.string.mstg_platform_1_title
+                                    }else{
+                                        R.string.mstg_platform_5_title
+                                    }
+                                ), it.getString(
+                                    if (position == 0){
+                                        R.string.mstg_platform_1_message
+                                    }else{
+                                        R.string.mstg_platform_5_message
+                                    }
+                                )).show(it.supportFragmentManager, "InfoDialog")
+                            }
+                        }
+                        1 -> {
+                            transaction(activity).replace(R.id.fragment_container, Platform2Fragment()).commit()
+                        }
+                        2 -> {
+                            transaction(activity).replace(R.id.fragment_container, Platform3Fragment()).commit()
+                        }
+                        3 -> {
+                            transaction(activity).replace(R.id.fragment_container, Platform4Fragment()).commit()
+                        }
+                        else -> {
+                            throw IllegalArgumentException("Out of range of the array.")
+                        }
+                    }
+                }
+                "code" -> {
+                    when(position){
+                        0 -> {
+                            transaction(activity).replace(R.id.fragment_container, Code1Fragment()).commit()
                         }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")
