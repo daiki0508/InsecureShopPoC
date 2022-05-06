@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.websarva.wings.android.insecureshoppoc">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="com.insecureshop.permission.READ" />
 
@@ -23,6 +25,9 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:priority="999">
+                <action android:name="com.insecureshop.action.PRODUCT_DETAIL" />
             </intent-filter>
         </activity>
     </application>

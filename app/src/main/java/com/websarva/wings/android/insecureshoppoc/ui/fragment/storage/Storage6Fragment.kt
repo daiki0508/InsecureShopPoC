@@ -15,7 +15,7 @@ import androidx.fragment.app.viewModels
 import com.websarva.wings.android.insecureshoppoc.R
 import com.websarva.wings.android.insecureshoppoc.databinding.FragmentStorage6Binding
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.InfoDialogFragment
-import com.websarva.wings.android.insecureshoppoc.viewmodel.fragment.storage.StorageViewModel
+import com.websarva.wings.android.insecureshoppoc.viewmodel.fragment.StorageViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

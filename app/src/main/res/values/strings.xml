@@ -2,6 +2,8 @@
     <string name="app_name">InsecureShopPoC</string>
     <string name="mstg_storage">MSTG-STORAGE</string>
     <string name="mstg_network">MSTG-NETWORK</string>
+    <string name="mstg_platform">MSTG-PLATFORM</string>
+    <string name="mstg_code">MSTG-CODE</string>
 
     <string name="storage_1">MSTG-STORAGE-1</string>
     <string name="storage_1_title">Info</string>
@@ -31,4 +33,46 @@
     <string name="network_3">MSTG-NETWORK-3</string>
     <string name="network_3_title">Info</string>
     <string name="network_3_message">WebViewActivityとWebView2Activityで使用しているCustomWebViewClientは証明書検証のエラーを無視しています\nこれはMITMに対して脆弱です</string>
+
+    <string name="mstg_platform_1">MSTG-PLATFORM-1</string>
+    <string name="mstg_platform_1_title">Info</string>
+    <string name="mstg_platform_1_message">外部ストレージへの読み書きとアドレス帳へのREAD権限が有効になっています\nこの権限が本当に必要かどうかを確認してください\n思わぬ脆弱性に繋がる可能性があります</string>
+    <string name="mstg_platform_2">MSTG-PLATFORM-2</string>
+    <string name="mstg_platform_2_rb_1">任意コードの実行</string>
+    <string name="mstg_platform_2_rb_2">WebView2Activityでurl未検証による任意ページの表示</string>
+    <string name="mstg_platform_2_rb_3">ChooserActivityでintentの未検証による内部ストレージ内の任意のファイルの盗難</string>
+    <string name="mstg_platform_2_rb_4">CustomReceiverのweb_urlの未検証による任意ページの表示</string>
+    <string name="mstg_platform_2_cb_2">リモート可</string>
+    <string name="mstg_platform_2_cb_3">provider_paths.xmlの権限ミス(root-path)</string>
+    <string name="mstg_platform_2_bt_display">Display</string>
+    <string name="mstg_platform_2_bt_attack">Attack</string>
+    <string name="mstg_platform_2_title">Info</string>
+    <string name="mstg_platform_2_1_message">com.insecureshopapp*.MainInterface内のコードを検証無しで実行するため、com.insecureshopapp.poc.MainInterface内に任意のコードを記述して実行できる</string>
+    <string name="mstg_platform_2_2_message">「intent://example/#Intent;package=com.insecureshop;action=com.insecureshop.action.WEBVIEW;S.url=http://example.com;end」のリンクを作成する</string>
+    <string name="mstg_platform_2_3_toast_error">このPoCはAPI29未満で動作します</string>
+    <string name="mstg_platform_3">MSTG-PLATFORM-3</string>
+    <string name="mstg_platform_3_rb_1">カスタムスキーマで呼び出されるWebViewActivityの/webパスでurlパラメータの未検証による任意ページの表示</string>
+    <string name="mstg_platform_3_cb_1">リモート可</string>
+    <string name="mstg_platform_3_bt_display">Display</string>
+    <string name="mstg_platform_3_bt_attack">Attack</string>
+    <string name="mstg_platform_3_title">Info</string>
+    <string name="mstg_platform_3_message">「intent://com.insecureshop/web#intent;package=com.insecureshop;scheme=insecureshop;S.url=http://example.com;end」のリンクを作成する</string>
+    <string name="mstg_platform_4">MSTG-PLATFORM-4</string>
+    <string name="mstg_platform_4_rb_1">公開Broadcastを通じた機密情報の送信</string>
+    <string name="mstg_platform_4_rb_2">Broadcastの乗っ取り</string>
+    <string name="mstg_platform_4_rb_3">権限の範囲内での任意のintentの実行</string>
+    <string name="mstg_platform_4_bt_attack">Attack</string>
+    <string name="mstg_platform_4_title">Info</string>
+    <string name="mstg_platform_4_toast_error">エラーが発生しました\n必要な権限は有効になっていますか</string>
+    <string name="mstg_platform_5">MSTG-PLATFORM-5</string>
+    <string name="mstg_platform_5_title">Info</string>
+    <string name="mstg_platform_5_message">WebViewActivityとWebView2Activityでjavascriptの実行が有効になっている\n思わぬ脆弱性に繋がる可能性があるので不必要な場合は無効化するべき</string>
+
+    <string name="mstg_code_1">MSTG-CODE-1</string>
+    <string name="mstg_code_1_rb_1">v3スキームの未署名</string>
+    <string name="mstg_code_1_rb_2">Debug証明書でのリリース</string>
+    <string name="mstg_code_1_bt_display">Display</string>
+    <string name="mstg_code_1_title">Info</string>
+    <string name="mstg_code_1_1_message">v3スキーマの署名がされていない\nこのアプリにはJanusに対して脆弱である可能性がある</string>
+    <string name="mstg_code_1_2_message">Debug証明書で署名されている\nアプリの偽装被害が発生する可能性有</string>
 </resources>
