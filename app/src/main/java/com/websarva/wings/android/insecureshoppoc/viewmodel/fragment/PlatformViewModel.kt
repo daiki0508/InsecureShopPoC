@@ -1,4 +1,4 @@
-package com.websarva.wings.android.insecureshoppoc.viewmodel.fragment.storage
+package com.websarva.wings.android.insecureshoppoc.viewmodel.fragment
 
 import android.app.Application
 import android.content.Intent

@@ -20,7 +20,7 @@ import androidx.fragment.app.viewModels
 import com.websarva.wings.android.insecureshoppoc.R
 import com.websarva.wings.android.insecureshoppoc.databinding.FragmentPlatform4Binding
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.InfoDialogFragment
-import com.websarva.wings.android.insecureshoppoc.viewmodel.fragment.storage.PlatformViewModel
+import com.websarva.wings.android.insecureshoppoc.viewmodel.fragment.PlatformViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
