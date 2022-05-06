@@ -110,9 +110,21 @@ class RecyclerViewAdapter(
                 }
                 "platform" -> {
                     when(position){
-                        0 -> {
+                        0,4 -> {
                             activity.let {
-                                InfoDialogFragment(it.getString(R.string.mstg_platform_1_title), it.getString(R.string.mstg_platform_1_message)).show(it.supportFragmentManager, "InfoDialog")
+                                InfoDialogFragment(it.getString(
+                                    if (position == 0){
+                                        R.string.mstg_platform_1_title
+                                    }else{
+                                        R.string.mstg_platform_5_title
+                                    }
+                                ), it.getString(
+                                    if (position == 0){
+                                        R.string.mstg_platform_1_message
+                                    }else{
+                                        R.string.mstg_platform_5_message
+                                    }
+                                )).show(it.supportFragmentManager, "InfoDialog")
                             }
                         }
                         1 -> {

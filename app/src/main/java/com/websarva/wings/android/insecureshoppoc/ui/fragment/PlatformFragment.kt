@@ -36,7 +36,8 @@ class PlatformFragment: Fragment() {
                 getString(R.string.mstg_platform_1),
                 getString(R.string.mstg_platform_2),
                 getString(R.string.mstg_platform_3),
-                getString(R.string.mstg_platform_4)
+                getString(R.string.mstg_platform_4),
+                getString(R.string.mstg_platform_5)
             )
         )
         // recyclerViewの作成
