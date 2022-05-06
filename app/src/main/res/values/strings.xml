@@ -3,6 +3,7 @@
     <string name="mstg_storage">MSTG-STORAGE</string>
     <string name="mstg_network">MSTG-NETWORK</string>
     <string name="mstg_platform">MSTG-PLATFORM</string>
+    <string name="mstg_code">MSTG-CODE</string>
 
     <string name="storage_1">MSTG-STORAGE-1</string>
     <string name="storage_1_title">Info</string>
@@ -66,4 +67,12 @@
     <string name="mstg_platform_5">MSTG-PLATFORM-5</string>
     <string name="mstg_platform_5_title">Info</string>
     <string name="mstg_platform_5_message">WebViewActivityとWebView2Activityでjavascriptの実行が有効になっている\n思わぬ脆弱性に繋がる可能性があるので不必要な場合は無効化するべき</string>
+
+    <string name="mstg_code_1">MSTG-CODE-1</string>
+    <string name="mstg_code_1_rb_1">v3スキームの未署名</string>
+    <string name="mstg_code_1_rb_2">Debug証明書でのリリース</string>
+    <string name="mstg_code_1_bt_display">Display</string>
+    <string name="mstg_code_1_title">Info</string>
+    <string name="mstg_code_1_1_message">v3スキーマの署名がされていない\nこのアプリにはJanusに対して脆弱である可能性がある</string>
+    <string name="mstg_code_1_2_message">Debug証明書で署名されている\nアプリの偽装被害が発生する可能性有</string>
 </resources>

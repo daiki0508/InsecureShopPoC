@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.websarva.wings.android.insecureshoppoc.R
+import com.websarva.wings.android.insecureshoppoc.ui.fragment.code.Code1Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform2Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform3Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform4Fragment
@@ -44,6 +45,10 @@ class RecyclerViewAdapter(
                         2 -> {
                             // PlatformFragmentの起動
                             transaction(activity).replace(R.id.fragment_container, PlatformFragment()).commit()
+                        }
+                        3 -> {
+                            // CodeFragmentの起動
+                            transaction(activity).replace(R.id.fragment_container, CodeFragment()).commit()
                         }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")
@@ -135,6 +140,16 @@ class RecyclerViewAdapter(
                         }
                         3 -> {
                             transaction(activity).replace(R.id.fragment_container, Platform4Fragment()).commit()
+                        }
+                        else -> {
+                            throw IllegalArgumentException("Out of range of the array.")
+                        }
+                    }
+                }
+                "code" -> {
+                    when(position){
+                        0 -> {
+                            transaction(activity).replace(R.id.fragment_container, Code1Fragment()).commit()
                         }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")
