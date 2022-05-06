@@ -65,5 +65,5 @@
     <string name="mstg_platform_4_toast_error">エラーが発生しました\n必要な権限は有効になっていますか</string>
     <string name="mstg_platform_5">MSTG-PLATFORM-5</string>
     <string name="mstg_platform_5_title">Info</string>
-    <string name="mstg_platform_5_message">WebViewActivityとWebView2Activityでjavascriptの実行が有効になっている\n同時にMSTG-PLATFORM-6にも問題があるため被害が拡大</string>
+    <string name="mstg_platform_5_message">WebViewActivityとWebView2Activityでjavascriptの実行が有効になっている\n思わぬ脆弱性に繋がる可能性があるので不必要な場合は無効化するべき</string>
 </resources>
