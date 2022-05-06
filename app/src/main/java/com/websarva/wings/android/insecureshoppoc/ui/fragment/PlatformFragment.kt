@@ -35,7 +35,8 @@ class PlatformFragment: Fragment() {
             "items" to listOf(
                 getString(R.string.mstg_platform_1),
                 getString(R.string.mstg_platform_2),
-                getString(R.string.mstg_platform_3)
+                getString(R.string.mstg_platform_3),
+                getString(R.string.mstg_platform_4)
             )
         )
         // recyclerViewの作成

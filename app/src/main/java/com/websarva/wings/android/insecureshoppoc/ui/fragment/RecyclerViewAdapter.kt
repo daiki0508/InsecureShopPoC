@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.websarva.wings.android.insecureshoppoc.R
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform2Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform3Fragment
+import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform4Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.storage.Storage3Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.storage.Storage5Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.storage.Storage6Fragment
@@ -119,6 +120,9 @@ class RecyclerViewAdapter(
                         }
                         2 -> {
                             transaction(activity).replace(R.id.fragment_container, Platform3Fragment()).commit()
+                        }
+                        3 -> {
+                            transaction(activity).replace(R.id.fragment_container, Platform4Fragment()).commit()
                         }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")

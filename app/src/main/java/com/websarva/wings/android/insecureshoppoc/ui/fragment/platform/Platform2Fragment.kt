@@ -134,7 +134,7 @@ class Platform2Fragment: Fragment() {
                         }
                         // broadcastを送信
                         activity?.sendBroadcast(broadIntent)
-                    }, 1000)
+                    }, 500)
                 }
                 else -> {
                     throw IllegalArgumentException("Out of range of the array.")

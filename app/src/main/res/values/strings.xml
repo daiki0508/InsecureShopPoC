@@ -56,4 +56,11 @@
     <string name="mstg_platform_3_bt_attack">Attack</string>
     <string name="mstg_platform_3_title">Info</string>
     <string name="mstg_platform_3_message">「intent://com.insecureshop/web#intent;package=com.insecureshop;scheme=insecureshop;S.url=http://example.com;end」のリンクを作成する</string>
+    <string name="mstg_platform_4">MSTG-PLATFORM-4</string>
+    <string name="mstg_platform_4_rb_1">公開Broadcastを通じた機密情報の送信</string>
+    <string name="mstg_platform_4_rb_2">Broadcastの乗っ取り</string>
+    <string name="mstg_platform_4_rb_3">権限の範囲内での任意のintentの実行</string>
+    <string name="mstg_platform_4_bt_attack">Attack</string>
+    <string name="mstg_platform_4_title">Info</string>
+    <string name="mstg_platform_4_toast_error">エラーが発生しました\n必要な権限は有効になっていますか</string>
 </resources>
