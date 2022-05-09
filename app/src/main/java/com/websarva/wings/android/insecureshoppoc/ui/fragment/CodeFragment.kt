@@ -33,7 +33,8 @@ class CodeFragment: Fragment() {
         val items = mapOf(
             "position" to "code",
             "items" to listOf(
-                getString(R.string.mstg_code_1)
+                getString(R.string.mstg_code_1),
+                getString(R.string.mstg_code_2)
             )
         )
         // recyclerViewの作成

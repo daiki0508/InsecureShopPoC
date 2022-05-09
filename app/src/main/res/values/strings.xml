@@ -75,4 +75,11 @@
     <string name="mstg_code_1_title">Info</string>
     <string name="mstg_code_1_1_message">v3スキーマの署名がされていない\nこのアプリにはJanusに対して脆弱である可能性がある</string>
     <string name="mstg_code_1_2_message">Debug証明書で署名されている\nアプリの偽装被害が発生する可能性有</string>
+    <string name="mstg_code_2">MSTG-CODE-2</string>
+    <string name="mstg_code_2_rb_1">リリース版でのデバック属性の有効化</string>
+    <string name="mstg_code_2_rb_2">リリース版でのバックアップ属性の有効化</string>
+    <string name="mstg_code_2_bt_display">Display</string>
+    <string name="mstg_code_2_title">Info</string>
+    <string name="mstg_code_2_1_message">debugが許可されています\nコード改ざんやメモリ改ざん等に対して脆弱です</string>
+    <string name="mstg_code_2_2_message">バックアップが明示的に許可されています\n機密情報がバックアップ内のファイルに含まれていないか確認してください</string>
 </resources>
