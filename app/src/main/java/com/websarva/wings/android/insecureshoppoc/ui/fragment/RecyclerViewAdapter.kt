@@ -155,6 +155,23 @@ class RecyclerViewAdapter(
                         1 -> {
                             transaction(activity).replace(R.id.fragment_container, Code2Fragment()).commit()
                         }
+                        2 -> {
+                            activity.let {
+                                InfoDialogFragment(it.getString(
+                                    if (position == 2){
+                                        R.string.mstg_code_4_title
+                                    }else{
+                                        TODO("未実装")
+                                    }
+                                ), it.getString(
+                                    if (position == 2){
+                                        R.string.mstg_code_4_1_message
+                                    }else{
+                                        TODO("未実装")
+                                    }
+                                )).show(it.supportFragmentManager, "InfoDialog")
+                            }
+                        }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")
                         }

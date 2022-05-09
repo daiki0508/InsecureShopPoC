@@ -34,7 +34,8 @@ class CodeFragment: Fragment() {
             "position" to "code",
             "items" to listOf(
                 getString(R.string.mstg_code_1),
-                getString(R.string.mstg_code_2)
+                getString(R.string.mstg_code_2),
+                getString(R.string.mstg_code_4)
             )
         )
         // recyclerViewの作成
