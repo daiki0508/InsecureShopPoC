@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.websarva.wings.android.insecureshoppoc.R
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.code.Code1Fragment
+import com.websarva.wings.android.insecureshoppoc.ui.fragment.code.Code2Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform2Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform3Fragment
 import com.websarva.wings.android.insecureshoppoc.ui.fragment.platform.Platform4Fragment
@@ -150,6 +151,26 @@ class RecyclerViewAdapter(
                     when(position){
                         0 -> {
                             transaction(activity).replace(R.id.fragment_container, Code1Fragment()).commit()
+                        }
+                        1 -> {
+                            transaction(activity).replace(R.id.fragment_container, Code2Fragment()).commit()
+                        }
+                        2, 3 -> {
+                            activity.let {
+                                InfoDialogFragment(it.getString(
+                                    if (position == 2){
+                                        R.string.mstg_code_4_title
+                                    }else{
+                                        R.string.mstg_code_9_title
+                                    }
+                                ), it.getString(
+                                    if (position == 2){
+                                        R.string.mstg_code_4_1_message
+                                    }else{
+                                        R.string.mstg_code_9_1_message
+                                    }
+                                )).show(it.supportFragmentManager, "InfoDialog")
+                            }
                         }
                         else -> {
                             throw IllegalArgumentException("Out of range of the array.")
