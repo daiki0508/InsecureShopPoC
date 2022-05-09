@@ -85,4 +85,7 @@
     <string name="mstg_code_4">MSTG-CODE-4</string>
     <string name="mstg_code_4_title">Info</string>
     <string name="mstg_code_4_1_message">デバックログがリリース版で出力されています\nproguard-rulesで設定することでデバックログを一括削除した状態でビルド出来ます</string>
+    <string name="mstg_code_9">MSTG-CODE-9</string>
+    <string name="mstg_code_9_title">Info</string>
+    <string name="mstg_code_9_1_message">アプリに難読化が施されていません\nコード改ざんや処理改ざんの難易度が上がるため、難読化は必須処理です</string>
 </resources>
